@@ -4,10 +4,12 @@ import sys
 import json
 import requests
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="CLI test tool")
-    parser.add_argument("-H", "--host", default="http://127.0.0.1:8000", help="serverURL")
-    parser.add_argument("-r", "--repeat", type=int, default=1, help="Amount of repetition")
+    parser.add_argument("-H", "--host", default="http://127.0.0.1:8000",
+                        help="serverURL")
+    parser.add_argument("-r", "--repeat", type=int, default=1,
+                        help="Amount of repetition")
     parser.add_argument("-i", "--input", help="Input file ('-' for stdin)")
     parser.add_argument("-j", "--json", help="JSON string like input data")
     parser.add_argument("-o", "--output", help="output file ('-' for stdout)")
